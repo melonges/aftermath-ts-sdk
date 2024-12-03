@@ -32,7 +32,7 @@ import { AftermathApi } from "./aftermathApi";
 import { SuiClient, SuiHTTPTransport } from "@mysten/sui/client";
 import { Dca } from "../../packages/dca/dca";
 import { Multisig } from "../../packages/multisig/multisig";
-import { Limit } from "../../packages/limit/limit";
+import { LimitOrders } from "../../packages/limitOrders/limitOrders";
 import { UserData } from "../../packages/userData/userData";
 
 /**
@@ -145,7 +145,7 @@ export class Aftermath extends Caller {
 	 */
 	public Dca = () => new Dca(this.network, this.Provider);
 	public Multisig = () => new Multisig(this.network, this.Provider);
-	public Limit = () => new Limit(this.network, this.Provider);
+	public LimitOrders = () => new LimitOrders(this.network, this.Provider);
 	public UserData = () => new UserData(this.network, this.Provider);
 
 	// =========================================================================
